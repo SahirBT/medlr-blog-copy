@@ -1,0 +1,78 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+
+<div class="site-header-content {{#match @custom.header_style "Left aligned"}} left-aligned{{/match}}{{#unless @custom.show_publication_cover}}{{#match @custom.header_style "Hidden"}} no-content{{/match}}{{/unless}} md:h-[140%] w-[130%] mt-[-17%] ml-[-15%] bg-gradient-to-b from-[#00403F] to-[#00D0CF] rounded-[50%] flex flex-col items-center">
+
+    {{#if @custom.show_publication_cover}}
+        {{#if @site.cover_image}}
+            {{!-- This is a responsive image, it loads different sizes depending on device
+            https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
+            {{!-- <img class="site-header-cover
+            bg-gradient-to-b from-[#018686] to-[#00D0CF]"/> --}}
+        {{/if}}
+    {{/if}}
+
+    {{#match @custom.header_style "!=" "Hidden"}}
+        <div class="site-header-inner m-auto pt-[10%] px-[13%]">
+
+            {{!-- {{#match @custom.navigation_layout "Logo on cover"}}
+                {{#if @site.logo}}
+                    <img class="site-logo" src="{{@site.logo}}" alt="{{@site.title}}">
+                {{else}}
+                    <h1 class="site-title">Medlr</h1>
+                {{/if}}
+            {{/match}}
+            {{#if @site.description}}
+                <p class="site-description">{{@site.description}}</p>
+            {{/if}} --}}
+
+            <div class="latest-post">
+                {{#get "posts" limit="1" order="published_at desc" as |first_post|}}
+                     {{#foreach first_post}}
+                        {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                        {{> "home-post"}}
+                    {{/foreach}}
+                {{/get}}
+            </div>
+
+        </div>
+    {{/match}}
+
+</div>
+
+{{!-- The main content area --}}
+<main id="site-main" class="site-main outer">
+<div class="inner posts">
+    <div class="flex flex-row sm:gap-x-20 2xs:gap-x-12 pt-12">
+        <button class="max-w-fit lg:py-4 lg:px-16 sm:px-12 2xs:px-8 2xs:py-2 rounded-full text-[#2E2D28D9] font-bold items-center justify-center bg-[#F1CD4B] hover:text-[#00BFBE]">
+            <a href="{{url}}tag/health">
+                <div class="xl:text-2xl lg:text-xl md:text-lg 2xs:text-sm">Health</div>
+            </a>
+        </button>
+
+        <button class="max-w-fit lg:py-4 lg:px-16 sm:px-12 2xs:px-8 2xs:py-2 rounded-full text-[#2E2D28D9] font-bold items-center justify-center bg-[#F1CD4B] hover:text-[#00BFBE]">
+            <a href="{{url}}tag/news">
+                <div class="xl:text-2xl lg:text-xl md:text-lg 2xs:text-sm">News</div>
+            </a>
+        </button>
+
+        <button class="max-w-fit lg:py-4 lg:px-16 sm:px-12 2xs:px-8 2xs:py-2 rounded-full text-[#2E2D28D9] font-bold items-center justify-center bg-[#F1CD4B] hover:text-[#00BFBE]">
+            <a href="{{url}}tag/listicles">
+                <div class="xl:text-2xl lg:text-xl md:text-lg 2xs:text-sm">Listicles</div>
+            </a>
+        </button>
+
+    </div>
+    <div class="relative md:pt-28 sm:pt-20 2xs:pt-16 2xs:grid md:grid-cols-9 2xs:grid-cols-6 lg:gap-x-16 lg:gap-y-28 md:gap-x-12 md:gap-y-20 sm:gap-20 2xs:gap-x-8 2xs:gap-y-20">
+        {{#foreach posts}}
+            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+            {{> "post-card"}}
+        {{/foreach}}
+    </div>
+
+    {{pagination}}
+
+</div>
+</main>
