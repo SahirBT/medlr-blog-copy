@@ -10,7 +10,7 @@ into the {body} tag of the default.hbs template --}}
 <main id="site-main" class="site-main bg-gradient-to-b from-[#018686] to-[#00D0CF] flex flex-col justify-center lg:pt-[30%] lg:p-40 lg:pb-0 md:px-20 xs:pt-[33%] 2xs:p-10 2xs:pt-[40%] 2xs:pb-0">
 
     {{!-- The below code sets tab's heading to blog title --}}
-    {{#contentFor "title"}}{{title}}{{/contentFor}}
+    {{#contentFor "title"}}{{title}} - Medlr{{/contentFor}}
 
     <article class="article {{post_class}} {{#match @custom.post_image_style "Full"}}image-full{{else match @custom.post_image_style "=" "Small"}}image-small{{/match}}
     bg-[#EBEBEB] flex flex-col lg:gap-y-12 sm:gap-y-8 2xs:gap-y-4 items-center w-full rounded-[10px] xl:px-60 lg:px-40 sm:px-20 md:py-20 2xs:p-10">
