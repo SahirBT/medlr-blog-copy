@@ -47,7 +47,7 @@ which templates loop over to generate a list of posts. --}}
                         <span class="post-card-featured">{{> "icons/fire"}} Featured</span>
                     {{/if}}
                 </div>
-                <h2 class="post-card-title lg:py-4 md:py-2 sm:py-4 2xs:py-2 lg:text-3xl xs:text-xl lg:font-bold 2xs:text-base 2xs:font-black">
+                <h2 class="post-card-title lg:py-4 md:py-2 sm:py-4 2xs:py-2 lg:text-3xl xs:text-xl lg:font-bold 2xs:text-3xl 2xs:font-black">
                     {{#unless access}}
                     {{^has visibility="public"}}
                         {{#unless feature_image}}
@@ -59,11 +59,11 @@ which templates loop over to generate a list of posts. --}}
                 </h2>
             </header>
             {{#if excerpt}}
-                <div class="post-card-excerpt lg:text-2xl xs:text-base 2xs:text-sm">{{excerpt}}</div>
+                <div class="post-card-excerpt lg:text-2xl xs:text-base 2xs:text-xl">{{excerpt}}</div>
             {{/if}}
         </a>
 
-        <footer class="post-card-meta lg:text-2xl md:text-xl xs:text-lg 2xs:text-base pt-2">
+        <footer class="post-card-meta lg:text-2xl md:text-xl xs:text-lg 2xs:text-xl pt-2">
             <time class="post-card-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
             {{#if reading_time}}
                 <span class="post-card-meta-length">{{reading_time}}</span>

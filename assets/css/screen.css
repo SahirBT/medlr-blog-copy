@@ -1104,7 +1104,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     grid-column: span 6;
     display: grid;
     grid-gap: 4vmin;
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
     border-top: 0;
   }
 

@@ -144,7 +144,7 @@ into the {body} tag of the default.hbs template --}}
             <div class="other-posts">
                 <h1 class="p-16 text-center text-black xl:text-5xl lg:text-4xl sm:text-3xl xs:text-2xl 2xs:text-xl font-extrabold">You may also like</h1>
                 <aside class="px-12 relative">
-                    <div class="read-more inner 2xs:grid md:grid-cols-9 2xs:grid-cols-6 lg:gap-x-16 lg:gap-y-28 md:gap-x-12 md:gap-y-20 sm:gap-20 2xs:gap-x-8 2xs:gap-y-20">
+                    <div class="read-more inner xs:grid md:grid-cols-9 xs:grid-cols-6 flex flex-col lg:gap-x-16 lg:gap-y-28 md:gap-x-12 md:gap-y-20 sm:gap-20 2xs:gap-x-8 2xs:gap-y-20">
                         {{#foreach more_posts}}
                             {{> "post-card"}}
                         {{/foreach}}

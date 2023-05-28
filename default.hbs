@@ -52,21 +52,20 @@
             <div class="max-w-8xl px-4 flex justify-between items-center">
                 <!-- Website Logo -->
                 <div class="flex items-center">
-                    <a href="/" class="flex items-center py-4 px-2">			
+                    <a href="https://beta.medlr.in/" class="flex items-center py-4 px-2">			
                         {{> "icons/logo"}}
                     </a>
                 </div>
                 <!-- Primary Navbar items -->
-                <div class="hidden md:flex items-center ml-auto space-x-1 ">
+                <div class="hidden md:flex items-center ml-auto gap-x-2">
                     <a href="https://beta.medlr.in/about" class="py-4 px-2 text-white font-bold hover:text-[#00BFBE] ">About Us</a>
-                    <a href="/" class="py-4 px-2 text-white font-bold hover:text-[#00BFBE] transition duration-300">Blogs</a>
-                    <a href="" class="py-4 px-2 text-white font-bold hover:text-[#00BFBE] transition duration-300">FAQs</a>
-                    <a href="" class="py-4 px-2 text-white font-bold hover:text-[#00BFBE] transition duration-300">Get App</a>
+                    <a href="https://medlr.in/blog/" class="py-4 px-2 text-white font-bold hover:text-[#00BFBE] transition duration-300">Blogs</a>
+                    <a href="" class=" rounded-full bg-[#F1CD4B] py-3 px-3 my-1 text-l font-semibold text-black hover:bg-[#00BFBE] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00BFBE] transition duration-300">Sign Up</a>
                 </div>
 
                 {{!-- Secondary Navbar Items --}}
-                <div class="hidden md:flex items-center space-x-3 ">						
-                    <a href="" class=" rounded-full bg-[#F1CD4B] py-4 px-3 my-1 text-l font-semibold text-black hover:bg-[#00BFBE] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00BFBE] transition duration-300">Sign Up</a>
+                <div class="hidden md:flex items-center space-x-3">						
+                    {{!-- <a href="" class=" rounded-full bg-[#F1CD4B] py-4 px-3 my-1 text-l font-semibold text-black hover:bg-[#00BFBE] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00BFBE] transition duration-300">Sign Up</a> --}}
                 </div>
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
@@ -90,11 +89,10 @@
             
             <!-- mobile menu -->
             <div class="hidden mobile-menu">
-                <ul class="">
-                    <li class="active"><a href="https://beta.medlr.in/about" class="block text-sm px-2 py-4 text-white font-bold hover:text-[#00BFBE]">About Us</a></li>
-                    <li><a href="/" class="block text-sm px-2 py-4 text-white font-bold hover:text-[#00BFBE] transition duration-300">Blogs</a></li>
-                    <li><a href="#about" class="block text-sm px-2 py-4 text-white font-bold hover:text-[#00BFBE] transition duration-300">FAQs</a></li>
-                    <li><a href="#contact" class="block text-sm px-2 py-4 text-white font-bold hover:text-[#00BFBE] transition duration-300">Get App</a></li>
+                <ul class="backdrop-blur-sm bg-[#004E4D]/30">
+                    <li><a href="https://beta.medlr.in/about" class="py-4 px-2 text-white font-bold hover:text-[#00BFBE] ">About Us</a></li>
+                    <li><a href="https://medlr.in/blog/" class="py-4 px-2 text-white font-bold hover:text-[#00BFBE] transition duration-300">Blogs</a></li>
+                    <li class="py-4"><a href="" class=" rounded-full bg-[#F1CD4B] py-2 px-2 my-1 text-l font-semibold text-black hover:bg-[#00BFBE] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00BFBE] transition duration-300">Sign Up</a></li>
                 </ul>
             </div>
             
@@ -121,18 +119,18 @@
         <div class="flex justify-between">
             <div class="flex flex-col">
                 <a href="https://beta.medlr.in/about" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">About Us</a>
-                <a href="{{url}}about" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Our Mission</a>
-                <a href="{{url}}about" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Our Vision</a>
+                <a href="https://beta.medlr.in/about" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Our Mission</a>
+                <a href="https://beta.medlr.in/about" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Our Vision</a>
             </div>
             <div class="flex flex-col">
-                <a href="{{url}}about" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Terms And Conditions</a>
-                <a href="{{url}}about" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Contact Us</a>
-                <a href="{{url}}about" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Our Team</a>
+                <a href="https://beta.medlr.in/tandc" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Terms And Conditions</a>
+                <a href="https://beta.medlr.in/about" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Contact Us</a>
+                <a href="https://beta.medlr.in/about" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Our Team</a>
             </div>
             <div class="flex flex-col">
-                <a href="{{url}}about" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Get Our App</a>
-                <a href="{{url}}" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Blogs</a>
-                <a href="{{url}}about" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">FAQs</a>
+                <a href="" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Get Our App</a>
+                <a href="https://medlr.in/blog/" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Blogs</a>
+                <a href="https://beta.medlr.in/about" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">FAQs</a>
             </div>
         </div>
     </footer>

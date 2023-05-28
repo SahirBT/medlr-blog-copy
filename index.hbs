@@ -65,7 +65,7 @@ into the {body} of the default.hbs template --}}
         </button>
 
     </div>
-    <div class="relative md:pt-28 sm:pt-20 2xs:pt-16 2xs:grid md:grid-cols-9 2xs:grid-cols-6 lg:gap-x-16 lg:gap-y-28 md:gap-x-12 md:gap-y-20 sm:gap-20 2xs:gap-x-8 2xs:gap-y-20">
+    <div class="relative md:pt-28 sm:pt-20 2xs:pt-16 xs:grid md:grid-cols-9 xs:grid-cols-6 flex flex-col lg:gap-x-16 lg:gap-y-28 md:gap-x-12 md:gap-y-20 sm:gap-20 2xs:gap-x-8 2xs:gap-y-20">
         {{#foreach posts}}
             {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
             {{> "post-card"}}
