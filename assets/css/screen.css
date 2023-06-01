@@ -1357,6 +1357,12 @@ use it for applying any other styles. */
 created within the Ghost editor. The main content handles
 headings, text, images and lists. We deal with cards lower down. */
 
+/* figure images for post to scale */
+.gh-content > figure >  img{
+  max-height: 400px;
+  width: auto;
+}
+
 /* Default vertical spacing */
 .gh-content > * + * {
   margin-top: max(3.2vmin, 24px);
