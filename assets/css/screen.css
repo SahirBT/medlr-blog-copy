@@ -2046,7 +2046,7 @@ iframe.instagram-media + script + :not([id]) {
 
 .site-footer {
   position: relative;
-  background: linear-gradient(180deg, #00C1C0 -26.45%, #004746 135.37%);
+  background: linear-gradient(0deg, #00C1C0 -26.45%, #004746 135.37%);
 }
 
 .site-footer .inner {

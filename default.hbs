@@ -122,22 +122,68 @@
     </div>
 
     {{!-- The global footer at the very bottom of the screen --}}
-    <footer class="site-footer mt-28 sm:p-28 2xs:p-16">
+    <footer class="site-footer mt-28 p-8">
         <div class="flex justify-between">
-            <div class="flex flex-col">
-                <a href="https://beta.medlr.in/about" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">About Us</a>
-                <a href="https://beta.medlr.in/about" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Our Mission</a>
-                <a href="https://beta.medlr.in/about" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Our Vision</a>
-            </div>
-            <div class="flex flex-col">
-                <a href="https://beta.medlr.in/tandc" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Terms And Conditions</a>
-                <a href="https://beta.medlr.in/about" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Contact Us</a>
-                <a href="https://beta.medlr.in/about" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Our Team</a>
-            </div>
-            <div class="flex flex-col">
-                <a href="" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Get Our App</a>
-                <a href="https://medlr.in/blog/" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Blogs</a>
-                <a href="https://beta.medlr.in/about" class="text-[#E5E5E5] font-bold hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">FAQs</a>
+            <div class="w-full md:grid md:grid-rows-1 flex flex-col md:gap-0 gap-y-12">
+                {{!-- main grid with company and details --}}
+                <div class="grid md:grid-cols-3 gap-x-12">
+                    <div class="flex flex-col gap-y-4">
+                        <div class="flex items-center">
+                            <a href="https://beta.medlr.in/" class="flex items-center py-4 px-2">			
+                                {{> "icons/logo"}}
+                            </a>
+                        </div>
+                        <div class="text-xl text-white">
+                            At Medlr, we value our users and strive to provide the best possible experience. If you have any questions, comments, or feedback, please don't hesitate to contact us. You can reach us at the following:
+                        </div>
+                        <div class="flex flex-row lg:gap-x-12 sm:gap-x-8 2xs:gap-x-4">
+                            <a href="https://www.facebook.com/Medlr.in" target="_blank" rel="noopener" class="lg:w-[24px] lg:h-[24px] sm:w-[18px] sm:h-[18px] 2xs:w-[14px] 2xs:h-[14px] bg-transparent rounded-full">{{> "icons/facebook"}}</a>
+                            <a href="https://twitter.com/Medlr_in" target="_blank" class="lg:w-[24px] lg:h-[24px] sm:w-[18px] sm:h-[18px] 2xs:w-[14px] 2xs:h-[14px] bg-transparent rounded-full">{{> "icons/twitter"}}</a>
+                            <a href="https://www.instagram.com/medlr_in/" target="_blank" class="lg:w-[24px] lg:h-[24px] sm:w-[18px] sm:h-[18px] 2xs:w-[14px] 2xs:h-[14px] bg-transparent rounded-full">{{> "icons/instagram"}}</a>
+                            <a href="https://www.linkedin.com/company/medlr/" target="_blank" class="lg:w-[24px] lg:h-[24px] sm:w-[18px] sm:h-[18px] 2xs:w-[14px] 2xs:h-[14px] bg-transparent rounded-full">{{> "icons/linkedin"}}</a>
+                        </div>
+                    </div>
+                    <div class="md:grid hidden pt-8 grid-cols-3 col-span-2">
+                        <div class="flex flex-col lg:gap-y-8 gap-y-4">
+                            <div class="text-white font-bold xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl xs:text-lg 2xs:text-base">Company</div>
+                            <a href="https://beta.medlr.in/about" class="text-[#E5E5E5] hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">About Us</a>
+                            <a href="https://medlr.in/blog/" class="text-[#E5E5E5] hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Blogs</a>
+                            <a href="https://beta.medlr.in/about" class="text-[#E5E5E5] hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">FAQs</a>
+                            <a href="https://beta.medlr.in/about" class="text-[#E5E5E5] hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Contact Us</a>
+                        </div>
+                        <div class="flex flex-col lg:gap-y-8 gap-y-4">
+                            <div class="text-white font-bold xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl xs:text-lg 2xs:text-base">Policy Info</div>
+                            <a href="https://beta.medlr.in/privacy-policy" class="text-[#E5E5E5] hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Privacy Policy</a>
+                            <a href="https://beta.medlr.in/tandc" class="text-[#E5E5E5] hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Terms And Conditions</a>
+                            <a href="https://beta.medlr.in/editorial-policy" class="text-[#E5E5E5] hover:text-[#00BFBE] xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-base 2xs:text-sm">Editorial Policy</a>
+                        </div>
+                        <div class="flex flex-col lg:gap-y-8 gap-y-4">
+                            <div class="text-white font-bold xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl xs:text-lg 2xs:text-base">Get Our App</div>
+                            <div class="flex md:flex-col md:gap-y-4 gap-x-4">
+                                <a href="/">{{> "icons/google-play-logo"}}</a>
+                                <a href="/">{{> "icons/app-store-logo"}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{!-- mobile view get app --}}
+                <div class="md:hidden flex flex-col lg:gap-y-8 gap-y-4">
+                    <div class="text-white font-bold xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl xs:text-lg 2xs:text-base">Get Our App</div>
+                    <div class="flex md:flex-col xs:flex-row flex-col md:gap-y-4 xs:gap-x-4 gap-y-4">
+                        <a href="/">{{> "icons/google-play-logo"}}</a>
+                        <a href="/">{{> "icons/app-store-logo"}}</a>
+                    </div>
+                </div>
+
+                {{!-- newsletter section --}}
+                <div class="flex p-4 pl-0 md:pt-12 gap-x-4 items-center">
+                    <div class="text-white font-bold xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl 2xs:text-lg">Subscribe to our Newsletter</div>
+                    <div class="flex items-center h-[40px]">
+                        <input type="email" placeholder="Enter your email address" class="rounded-l-md p-4 h-full xs:w-max w-full">
+                        <button class="bg-[#F1CD4B] py-3 px-4 rounded-r-md h-full">{{>"icons/send"}}</button>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
